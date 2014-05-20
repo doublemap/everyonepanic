@@ -14,13 +14,13 @@ UPTIME_ROBOT_KEY = os.environ['UPTIME_ROBOT_KEY']
 UPTIME_ROBOT = "http://api.uptimerobot.com/getMonitors?apiKey=" + UPTIME_ROBOT_KEY + "&format=json&noJsonCallback=1"
 
 # what's our app name?
-APPENGINE_HOSTNAME = "YOUR_APP_HERE.appspot.com"
+APP_HOSTNAME = "YOUR_APP_HERE.appspot.com"
 if 'MY_APP_NAME_HOSTNAME' in os.environ:  # try environment
-    APPENGINE_HOSTNAME = os.environ['MY_APP_HOSTNAME']
+    APP_HOSTNAME = os.environ['MY_APP_HOSTNAME']
 else:  # try getting it from app engine
     try:
         from google.appengine.api.app_identity import get_application_id
-        APPENGINE_HOSTNAME = get_application_id() + ".appspot.com"
+        APP_HOSTNAME = get_application_id() + ".appspot.com"
     except ImportError:
         pass
 
@@ -46,7 +46,7 @@ def get_uptime_status():
 def trigger_call(recipients):
     client = TwilioRestClient(TWILIO_SID, TWILIO_TOKEN)
     for recp in recipients:
-        call = client.calls.create(url=("http://%s/downmessage" % APPENGINE_HOSTNAME),
+        call = client.calls.create(url=("http://%s/downmessage" % APP_HOSTNAME),
             to=recp, from_=TWILIO_FROM)
     
 
