@@ -5,6 +5,10 @@ import urllib2
 import webapp2
 from twilio.rest import TwilioRestClient
 
+# Calls you when your sites go down.
+# License is GPLv3.
+# Author: Eric Jiang <eric@doublemap.com>
+
 TWILIO_SID = os.environ['TWILIO_SID']
 TWILIO_TOKEN = os.environ['TWILIO_TOKEN']
 TWILIO_FROM = os.environ['TWILIO_FROM']
