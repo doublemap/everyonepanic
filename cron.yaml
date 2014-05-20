@@ -1,0 +1,4 @@
+cron:
+- description: quarter-hour status check
+  url: /checksites
+  schedule: every 15 minutes
