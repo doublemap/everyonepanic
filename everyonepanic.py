@@ -19,8 +19,8 @@ UPTIME_ROBOT = "http://api.uptimerobot.com/getMonitors?apiKey=" + UPTIME_ROBOT_K
 
 # what's our app name?
 APP_HOSTNAME = "YOUR_APP_HERE.appspot.com"
-if 'MY_APP_NAME_HOSTNAME' in os.environ:  # try environment
-    APP_HOSTNAME = os.environ['MY_APP_HOSTNAME']
+if 'APP_HOSTNAME' in os.environ:  # try environment
+    APP_HOSTNAME = os.environ['APP_HOSTNAME']
 else:  # try getting it from app engine
     try:
         from google.appengine.api.app_identity import get_application_id
