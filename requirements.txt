@@ -1,4 +1,5 @@
 twilio==3.5.1
 httplib2==0.8
+WebOb==1.2.3
 webapp2==2.3
 gunicorn==18.0
