@@ -1,1 +1,1 @@
-web: gunicorn everyonepanic:app
+web: gunicorn everyonepanic:application
