@@ -31,7 +31,7 @@ You need to add in a few different environment variables, either through the
 * `TWILIO_TOKEN` - also find this in your Twilio account
 * `TWILIO_FROM` - a Twilio purchased or validated phone number
 * `CALLEES` - a comma separated list of phone numbers:
-`+15551111111,+15552222222'
+`+15551111111,+15552222222`
 * `UPTIME_ROBOT_KEY` - your Uptime Robot account's API key
 
 
