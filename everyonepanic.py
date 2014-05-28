@@ -52,7 +52,7 @@ def trigger_call(recipients):
     for recp in recipients:
         call = client.calls.create(url=("http://%s/downmessage" % APP_HOSTNAME),
             to=recp, from_=TWILIO_FROM)
-    
+
 
 class CheckUptimes(webapp2.RequestHandler):
     def get(self):
